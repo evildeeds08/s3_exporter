@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  s3-exporter:
+    build: .
+    env_file: .env
+    ports:
+      - "9337:9337"
+    volumes:
+      - ./certs:/app/certs
+      - ./rclone.conf:/root/.config/rclone/rclone.conf
