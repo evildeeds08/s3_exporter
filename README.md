@@ -71,7 +71,7 @@ If you don't have your own SSL certificates, you can generate self-signed certif
 mkdir -p certs
 openssl req -x509 -newkey rsa:4096 -keyout certs/server.key -out certs/server.crt -days 365 -nodes -subj "/CN=localhost"
 ```
-### 4.2 Use Your Own SSL Certificates
+#### 4.2 Use Your Own SSL Certificates
 If you already have valid SSL certificates from a certificate authority (CA), you can simply place the certificate and key files in the certs/ directory. Update the paths in the .env file accordingly:
 ```
 SSL_CERT_FILE=/app/certs/your-certificate.crt
